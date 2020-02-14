@@ -1,0 +1,172 @@
+.navigation {
+	position: absolute;
+	top: 0;
+	height: 10rem;
+	z-index: 1;
+	width: 100%;
+	padding: 0 8rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	@include respond(phone) {
+		padding: 0 2rem;
+		height: 8rem;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		list-style: none;
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
+
+	&__item {
+		font-size: 1.3rem;
+		text-transform: capitalize;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+
+		&--link {
+			&:link,
+			&:visited {
+				color: $color-white;
+				text-decoration: none;
+			}
+
+			&:hover,
+			&:active {
+				color: $color-grey;
+			}
+		}
+	}
+
+	&__btn {
+		position: relative;
+		width: 3rem;
+
+		&,
+		&::before,
+		&::after {
+			border-radius: 0;
+			border: none;
+			display: none;
+			height: 1px;
+			background-color: $color-white;
+
+			@include respond(phone) {
+				display: inline-block;
+			}
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			right: 0;
+		}
+
+		&::before {
+			top: -0.9rem;
+			width: 2rem;
+		}
+		&::after {
+			top: 0.9rem;
+			width: 3rem;
+		}
+	}
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 0 8rem;
+
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	display: grid;
+	align-content: center;
+
+	@include respond(phone) {
+		padding: 0 2rem;
+		min-height: 60rem;
+	}
+}
+
+.footer {
+	position: relative;
+	width: 100%;
+	height: 10rem;
+	background-color: $color-primary;
+	padding: 0 8rem;
+
+	@include respond(phone) {
+		padding: 0 2rem;
+	}
+
+	&__content {
+		display: block;
+		width: 100%;
+		height: inherit;
+
+		display: grid;
+		justify-items: center;
+		align-content: center;
+
+		&--text {
+			color: $color-grey-light;
+			font-size: 1.3rem;
+			margin: 1rem 0;
+
+			a {
+				&:link,
+				&:visited {
+					text-decoration: none;
+					color: $color-white;
+				}
+
+				&:hover,
+				&:active {
+					color: $color-grey;
+				}
+			}
+		}
+	}
+
+	&__nav {
+		list-style: none;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		font-size: 2rem;
+
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+
+		&--link {
+			&:link,
+			&:visited {
+				text-decoration: none;
+				color: $color-white;
+			}
+
+			&:hover,
+			&:active {
+				color: $color-grey;
+			}
+		}
+	}
+}
