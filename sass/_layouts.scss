@@ -99,7 +99,15 @@
 
 	@include respond(phone) {
 		padding: 0 2rem;
-		min-height: 60rem;
+	}
+
+	&__content {
+		height: 70%;
+		width: 100%;
+
+		display: grid;
+		justify-items: start;
+		grid-row-gap: 2rem;
 	}
 }
 
