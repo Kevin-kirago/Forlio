@@ -1,5 +1,5 @@
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function(e) {
 	var currentscrollpos = window.pageYOffset;
 
 	if (prevScrollpos > currentscrollpos) {
@@ -27,3 +27,4 @@ function animateCSS(element, animationName, callback) {
 }
 
 animateCSS(".scroll-indicator", "bounce");
+window.onload = animateCSS(".header__content", "fadeInDownBig");
