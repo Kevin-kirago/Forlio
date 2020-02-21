@@ -13,24 +13,24 @@
 	</head>
 	<body>
 		<nav class="navigation" id="navbar">
+			<a href="#home" class="navigation__logo">K.</a>
 			<ul class="navigation__list">
-				<li class="navigation__item"><a href="#home" class="navigation__item--link">Home</a></li>
 				<li class="navigation__item"><a href="#home" class="navigation__item--link">Work</a></li>
 				<li class="navigation__item"><a href="#home" class="navigation__item--link">About</a></li>
 				<li class="navigation__item"><a href="#home" class="navigation__item--link">Contact</a></li>
-				<a href="#" class="btn">Resume</a>
+				<a href="./img/Resume.pdf" target="_blank" class="btn">Resume</a>
 			</ul>
 			<button class="navigation__btn"></button>
 		</nav>
-		<header class="header" id="header">
+		<header class="header">
 			<div class="header__content">
-				<h1 class="heading__primary">
+				<h1 class="heading__primary h1">
 					Front-End developer <br />
 					& Ux Enthusiast
 				</h1>
-				<p class="paragraph-large">Hi, my name is <b>Kevin Kiragu.</b> I'm a software developer based in Nairobi, Kenya specializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
-				<p class="paragraph-small">Css / Javascript / React</p>
-				<a href="#contact" class="btn">Get In Touch</a>
+				<p class="paragraph-large h2">Hi, my name is <b>Kevin Kiragu.</b> I'm a software developer based in Nairobi, Kenya specializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
+				<p class="paragraph-small h3">Css / Javascript / React</p>
+				<a href="#contact" class="btn h4">Get In Touch</a>
 			</div>
 
 			<div class="scroll-indicator ">
@@ -38,7 +38,13 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="work"></section>
+			<div class="work">
+				<div class="gallery__item gallery__item--1"></div>
+				<div class="gallery__item gallery__item--2"></div>
+				<div class="gallery__item gallery__item--3"></div>
+				<div class="gallery__item gallery__item--4"></div>
+				<div class="gallery__item gallery__item--5"></div>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__content">
@@ -54,6 +60,7 @@
 			</div>
 		</footer>
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
 		<script src="js/index.js"></script>
 	</body>
 </html>

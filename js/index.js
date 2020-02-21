@@ -10,7 +10,6 @@ window.onscroll = function(e) {
 
 	prevScrollpos = currentscrollpos;
 };
-
 // animations (animate.css)
 function animateCSS(element, animationName, callback) {
 	const node = document.querySelector(element);
@@ -27,4 +26,45 @@ function animateCSS(element, animationName, callback) {
 }
 
 animateCSS(".scroll-indicator", "bounce");
-window.onload = animateCSS(".header__content", "fadeInDownBig");
+
+document.addEventListener("DOMContentLoaded", () => {
+	window.onload = () => {
+		const tmLine = gsap.timeline();
+
+		tmLine
+			.from(".h1", {
+				autoAlpha: 0,
+				y: 20,
+				duration: 1,
+				delay: 0.3,
+				ease: "ease"
+			})
+			.from(".h2", {
+				autoAlpha: 0,
+				y: 20,
+				duration: 0.8,
+				delay: 0.2,
+				ease: "ease"
+			})
+			.from(".h3", {
+				autoAlpha: 0,
+				y: 20,
+				duration: 0.7,
+				delay: 0.1,
+				ease: "ease"
+			})
+			.from(".h4", {
+				autoAlpha: 0,
+				y: 20,
+				duration: 0.8,
+				ease: "ease"
+			})
+			.from([".navigation__logo", ".navigation__list", ".navigation__btn"], {
+				autoAlpha: 0,
+				y: 30,
+				duration: 1.5,
+				delay: 0.3,
+				ease: "ease"
+			});
+	};
+});
