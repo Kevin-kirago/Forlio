@@ -13,7 +13,7 @@
 	}
 
 	&:hover,
-	&:focus {
+	&:active {
 		outline: none;
 		background-color: rgba($color-grey-light, 0.2);
 	}
@@ -39,9 +39,17 @@
 }
 
 .heading__secondary {
+	display: inline-block;
 	color: $color-white;
-	font-size: 2.5rem;
-	font-weight: 400;
+	font-size: 3rem;
+	font-weight: 600;
+	padding: 0.5rem 0;
+
+	border-bottom: 1px solid $color-grey;
+
+	@include respond(phone) {
+		font-size: 2.5rem;
+	}
 }
 
 .paragraph {

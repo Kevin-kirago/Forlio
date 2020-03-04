@@ -1,15 +1,3 @@
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function(e) {
-	var currentscrollpos = window.pageYOffset;
-
-	if (prevScrollpos > currentscrollpos) {
-		document.getElementById("navbar").style.top = "0";
-	} else {
-		document.getElementById("navbar").style.top = "-100px";
-	}
-
-	prevScrollpos = currentscrollpos;
-};
 // animations (animate.css)
 function animateCSS(element, animationName, callback) {
 	const node = document.querySelector(element);
@@ -36,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				autoAlpha: 0,
 				y: 20,
 				duration: 1,
-				delay: 0.3,
+				delay: 0.9,
 				ease: "ease"
 			})
 			.from(".h2", {
@@ -56,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			.from(".h4", {
 				autoAlpha: 0,
 				y: 20,
-				duration: 0.8,
+				duration: 0.6,
 				ease: "ease"
 			})
 			.from([".navigation__logo", ".navigation__list", ".navigation__btn"], {
 				autoAlpha: 0,
-				y: 30,
+				y: 20,
 				duration: 1.5,
 				delay: 0.3,
 				ease: "ease"
