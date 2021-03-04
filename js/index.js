@@ -58,11 +58,17 @@ if (window.location.pathname === "/index.html" || window.location.pathname === "
 		};
 	});
 } else {
-	tmLine.from([".navigation__logo", ".navigation__list", ".navigation__btn"], {
-		autoAlpha: 0,
-		y: 20,
-		duration: 1,
-		delay: 0.3,
-		ease: "ease",
-	});
+	tmLine
+		.from([".navigation__logo", ".navigation__list", ".navigation__btn"], {
+			autoAlpha: 0,
+			duration: 1,
+			delay: 0.3,
+			y: 20,
+			ease: "ease",
+		})
+		.from([".content"], {
+			delay: 0.2,
+			opacity: 0,
+			ease: "ease",
+		});
 }

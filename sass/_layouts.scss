@@ -207,6 +207,23 @@
 			}
 		}
 	}
+
+	.content {
+		position: relative;
+		display: grid;
+		align-content: center;
+		justify-items: center;
+
+		opacity: 1;
+
+		&__contact {
+			padding: 5rem 0;
+			display: grid;
+			align-content: center;
+			justify-items: center;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }
 
 .footer {
